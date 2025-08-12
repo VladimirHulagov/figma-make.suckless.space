@@ -1,0 +1,404 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Custom SUCKLESS.space colors */
+  --suckless-bg: #131416;
+  --suckless-text: #e6e6e6;
+  --suckless-accent: #00b7ff;
+  --suckless-card: #1e2024;
+  --suckless-border: #2a2d32;
+}
+
+.dark {
+  --background: var(--suckless-bg);
+  --foreground: var(--suckless-text);
+  --card: var(--suckless-card);
+  --card-foreground: var(--suckless-text);
+  --popover: var(--suckless-card);
+  --popover-foreground: var(--suckless-text);
+  --primary: var(--suckless-accent);
+  --primary-foreground: var(--suckless-bg);
+  --secondary: #2a2d32;
+  --secondary-foreground: var(--suckless-text);
+  --muted: #2a2d32;
+  --muted-foreground: #9ca3af;
+  --accent: #2a2d32;
+  --accent-foreground: var(--suckless-text);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: var(--suckless-border);
+  --input: var(--suckless-border);
+  --ring: var(--suckless-accent);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--suckless-accent);
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --sidebar: var(--suckless-card);
+  --sidebar-foreground: var(--suckless-text);
+  --sidebar-primary: var(--suckless-accent);
+  --sidebar-primary-foreground: var(--suckless-bg);
+  --sidebar-accent: #2a2d32;
+  --sidebar-accent-foreground: var(--suckless-text);
+  --sidebar-border: var(--suckless-border);
+  --sidebar-ring: var(--suckless-accent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom utilities */
+  --color-suckless-bg: var(--suckless-bg);
+  --color-suckless-text: var(--suckless-text);
+  --color-suckless-accent: var(--suckless-accent);
+  --color-suckless-card: var(--suckless-card);
+  --color-suckless-border: var(--suckless-border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  a {
+    color: var(--suckless-accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom classes for SUCKLESS.space */
+.suckless-gradient {
+  background: linear-gradient(135deg, var(--suckless-card) 0%, #252830 100%);
+}
+
+.suckless-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.suckless-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* React Flow стили */
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__controls {
+  display: none !important;
+}
+
+/* Анимации для узлов дерева */
+.react-flow__node {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.react-flow__edge {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Анимации для перестройки дерева */
+.react-flow__node-argumentNode {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Улучшенные переходы для Motion компонентов */
+.argument-node-rebalancing {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Стили для редактируемых узлов */
+.editing-node-highlight {
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 183, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(0, 183, 255, 0.1);
+  }
+}
+
+/* Анимация для увеличения узла при редактировании */
+.react-flow__node-argumentNode .argument-node-rebalancing {
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Стили для комментариев */
+.comment-item {
+  background: rgba(30, 32, 36, 0.6);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.comment-item:hover {
+  background: rgba(30, 32, 36, 0.8);
+}
+
+/* Анимация кнопок голосования */
+.vote-button {
+  transition: all 0.2s ease;
+}
+
+.vote-button:hover {
+  transform: scale(1.1);
+}
+
+.vote-button:active {
+  transform: scale(0.95);
+}
+
+/* Стили для плавной прокрутки комментариев */
+.comments-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.comments-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.comments-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.comments-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.comments-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Простые стили для развернутых комментариев */
+.comments-expanded {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(30, 32, 36, 0.95);
+  border: 1px solid rgba(0, 183, 255, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.4),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 183, 255, 0.1);
+}
+
+/* Стили для панели этапов */
+.stages-navigation {
+  background: linear-gradient(135deg, var(--suckless-card) 0%, #252830 100%);
+}
+
+/* Анимации для индикаторов прогресса */
+.progress-indicator {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 183, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Hover эффекты для карточек этапов */
+.stage-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 183, 255, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stage-card:hover::before {
+  opacity: 1;
+}
+
+/* Анимация для активного этапа */
+.active-stage-pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 183, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(0, 183, 255, 0.1);
+  }
+}
